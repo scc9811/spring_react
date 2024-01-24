@@ -1,7 +1,8 @@
 package com.spring_react.practice;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
 
 @SpringBootApplication
 public class PracticeApplication {
@@ -10,3 +11,4 @@ public class PracticeApplication {
 		SpringApplication.run(PracticeApplication.class, args);
 	}
 }
+
