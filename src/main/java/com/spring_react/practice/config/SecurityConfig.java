@@ -14,8 +14,6 @@ import org.springframework.security.config.annotation.web.configurers.CsrfConfig
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import java.io.IOException;
-
 @EnableWebSecurity
 @Configuration
 @RequiredArgsConstructor
@@ -35,7 +33,7 @@ public class SecurityConfig {
                 .httpBasic(Customizer.withDefaults())
                 .authorizeHttpRequests(
                         httpRequests -> httpRequests
-                                // /api~~ 은 모든 접근을 허용.
+                                // /api/user/login~~ 은 모든 접근을 허용.
                                 .requestMatchers("/api/user/login").permitAll()
                                 // 나머지 리소스(anyRequest) 접근에 대해서는 인증(authenticated)을 거쳐야 함.
                                 .anyRequest().authenticated()
